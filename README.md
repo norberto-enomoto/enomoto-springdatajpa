@@ -15,9 +15,11 @@ This project shows how to use Spring Data JPA using MySQL or Oracle
 * `https://github.com/wnameless/docker-oracle-xe-11g`
 * `docker run -d -p 49161:1521 -p 8080:8080 wnameless/oracle-xe-11g-r2`
 
+```
 hostname: localhost
 port: 49161
 sid: xe
 username: system
 password: oracle
+```
 
