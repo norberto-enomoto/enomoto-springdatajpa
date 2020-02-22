@@ -1,0 +1,35 @@
+server:
+  port: 8181
+  
+spring:
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/db_example
+    username: springuser
+    password: ThePassword
+  jpa:
+    hibernate.ddl-auto: update
+    generate-ddl: true
+    show-sql: true
+
+# spring:
+#   datasource:
+#     driverClassName: oracle.jdbc.driver.OracleDriver
+#     url: jdbc:oracle:thin:@localhost:49161:XE
+#     username: SYSTEM
+#     password: oracle
+#     hikari.connection-timeout: 60000
+#     hikari.maximum-pool-size: 5    
+#   jpa:
+#     hibernate.ddl-auto: update
+#     database-platform: org.hibernate.dialect.Oracle10gDialect    
+#     generate-ddl: true
+#     show-sql: true
+
+logging: 
+  pattern:
+    console: "%d{dd-MM-yy HH:mm:ss.SSS} %-5level %logger : %msg%n"    
+  level:
+    org.springframework: INFO
+    org.hibernate.SQL: DEBUG
+    org.hibernate.type.descriptor.sql: trace
