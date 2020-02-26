@@ -2,6 +2,9 @@
 This project shows how to use Spring Data JPA using MySQL or Oracle databases
 
 ## MySQL
+
+Run the command bellow
+
 * `docker run --name poc-mysql -e MYSQL_ROOT_PASSWORD=123456 -d -p 3306:3306 mysql:5.7`
 * `docker exec -it poc-mysql bash`
 * `mysql -u root -p 123456`
@@ -11,7 +14,19 @@ This project shows how to use Spring Data JPA using MySQL or Oracle databases
 * `exit`
 * `mvn spring-boot:run`
 
+## Postgres
+
+Run the command bellow
+
+*`docker run -d -p 5432:5432 --name postgres postgres`
+*`docker exec -it postgres bash`
+*`psql -U postgres`
+*`CREATE DATABASE "db_example";`
+
 ## Oracle
+
+Run the command bellow
+
 * `https://github.com/wnameless/docker-oracle-xe-11g`
 * `docker run -d -p 49161:1521 -p 8080:8080 wnameless/oracle-xe-11g-r2`
 
