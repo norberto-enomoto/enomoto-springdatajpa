@@ -18,10 +18,10 @@ Run the command bellow
 
 Run the command bellow
 
-*`docker run -d -p 5432:5432 --name postgres postgres`
-*`docker exec -it postgres bash`
-*`psql -U postgres`
-*`CREATE DATABASE "db_example";`
+* `docker run -d -p 5432:5432 --name postgres postgres`
+* `docker exec -it postgres bash`
+* `psql -U postgres`
+* `CREATE DATABASE "db_example";`
 
 ## Oracle
 
