@@ -1,5 +1,6 @@
 package com.example.springdatajpa.service;
 
+
 import com.example.springdatajpa.model.User;
 import com.example.springdatajpa.repository.UserRepository;
 
