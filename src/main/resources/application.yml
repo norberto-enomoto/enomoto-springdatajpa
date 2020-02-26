@@ -1,6 +1,7 @@
 server:
   port: 8181
   
+#mysql  
 spring:
   datasource:
     driverClassName: com.mysql.jdbc.Driver
@@ -12,6 +13,7 @@ spring:
     generate-ddl: true
     show-sql: true
 
+#oracle
 # spring:
 #   datasource:
 #     driverClassName: oracle.jdbc.driver.OracleDriver
