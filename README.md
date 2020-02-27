@@ -1,5 +1,6 @@
 # Spring Data JPA
 This project shows how to use Spring Data JPA using MySQL or Oracle databases
+![Java CI](https://github.com/norberto-enomoto/enomoto-springdatajpa/workflows/Java%20CI/badge.svg)
 
 ## Run the Application
 * `./mvnw spring-boot:run`
