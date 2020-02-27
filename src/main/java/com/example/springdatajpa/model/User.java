@@ -17,6 +17,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
+// User Entity
 public class User {
   @Id
   @GeneratedValue(strategy=GenerationType.AUTO)
