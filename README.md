@@ -49,7 +49,7 @@ password: oracle
 ## hosts
 
 ```
-Add the followind entry at the hosts file
+Add the following entry at the hosts file
 127.0.0.1          mysql-db
 ```
 
