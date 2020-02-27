@@ -19,6 +19,6 @@ jobs:
       uses: actions/upload-artifact@v1.0.0
       with:
         # Artifact name
-        name: my-artifact
+        name: accessing-data-mysql-0.0.1-SNAPSHOT
         # Directory containing files to upload
         path: target/accessing-data-mysql-0.0.1-SNAPSHOT.jar
