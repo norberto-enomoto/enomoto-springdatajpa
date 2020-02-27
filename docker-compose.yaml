@@ -1,0 +1,32 @@
+version: '3.5'
+services:
+# springboot
+  springboot:
+    image: enomoto/springdatajpa:latest
+    ports:
+      - "8181:8181"
+    restart: always
+    depends_on: 
+      - db # This service depends on mysql. Start that first.   
+    networks: # Networks to join (Services on the same network can communicate with each other using their name)
+      - localhost
+    container_name: springdatajpa
+
+# Database Service (Mysql)
+  db:
+    image: mysql:latest
+    ports:
+      - "3306:3306"
+    restart: always
+    environment:
+      MYSQL_DATABASE: db_example
+      MYSQL_USER: springuser
+      MYSQL_PASSWORD: ThePassword
+      MYSQL_ROOT_PASSWORD: 123456
+    networks:
+      - localhost
+    container_name: mysql-db
+
+# Networks to be created to facilitate communication between containers
+networks:
+  localhost:

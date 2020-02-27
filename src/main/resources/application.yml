@@ -2,29 +2,29 @@ server:
   port: 8181
   
 #Mysql  
-# spring:
-#   datasource:
-#     driverClassName: com.mysql.jdbc.Driver
-#     url: jdbc:mysql://localhost:3306/db_example
-#     username: springuser
-#     password: ThePassword
-#   jpa:
-#     hibernate.ddl-auto: update
-#     generate-ddl: true
-#     show-sql: true
-
-#Postgres
 spring:
-  datasource:    
-    url: jdbc:postgresql://localhost:5432/db_example
-    username: postgres
-    password: 
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://mysql-db:3306/db_example
+    username: springuser
+    password: ThePassword
   jpa:
     hibernate.ddl-auto: update
     generate-ddl: true
     show-sql: true
-    properties:
-      hibernate.jdbc.lob.non_contextual_creation: true    
+
+# #Postgres
+# spring:
+#   datasource:    
+#     url: jdbc:postgresql://localhost:5432/db_example
+#     username: postgres
+#     password: 
+#   jpa:
+#     hibernate.ddl-auto: update
+#     generate-ddl: true
+#     show-sql: true
+#     properties:
+#       hibernate.jdbc.lob.non_contextual_creation: true    
 
 #Oracle
 # spring:
