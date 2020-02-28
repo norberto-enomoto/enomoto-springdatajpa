@@ -46,7 +46,7 @@ username: system
 password: oracle
 ```
 
-## hosts
+## hosts 
 
 ```
 Add the following entry at the hosts file
