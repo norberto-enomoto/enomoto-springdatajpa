@@ -31,7 +31,7 @@ Run the command bellow
 * `psql -U postgres`
 * `CREATE DATABASE "db_example";`
 
-## Oracle
+## Oracle 
 
 Run the command bellow
 
