@@ -53,3 +53,10 @@ Add the following entry at the hosts file
 127.0.0.1          mysql-db
 ```
 
+## docker-compose
+
+* `docker-compose up -d`
+* `docker-compose stop`
+* `docker-compose start`
+
+
