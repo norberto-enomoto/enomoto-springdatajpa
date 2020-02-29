@@ -1,4 +1,4 @@
-package com.example.springdatajpa.controller;
+package com.example.dxc.springdatajpa.controller;
 
 import javax.validation.constraints.NotBlank;
 

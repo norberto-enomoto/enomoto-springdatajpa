@@ -1,9 +1,9 @@
-package com.example.springdatajpa.controller;
+package com.example.dxc.springdatajpa.controller;
 
 import javax.validation.Valid;
 
-import com.example.springdatajpa.service.UserService;
-import com.example.springdatajpa.model.User;
+import com.example.dxc.springdatajpa.service.UserService;
+import com.example.dxc.springdatajpa.model.User;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

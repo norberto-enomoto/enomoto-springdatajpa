@@ -53,13 +53,18 @@ Add the following entry at the hosts file
 127.0.0.1          database
 ```
 
+## Create the Spring Data JPA image
+
+* `docker build --rm -f "Dockerfile" -t enomoto/springdatajpa:latest "."`
+
 ## docker-compose
 
-* `docker-compose up -d`
+* `docker-compose -f docker-compose-mysql.yml up -d`
+* `docker-compose -f docker-compose-oracle.yml up -d`
 * `docker-compose stop`
 * `docker-compose start`
 
-## Important Link for Oracle JDBC driver
+## Important Links for Oracle JDBC driver
 * `https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html`
 * `https://mkyong.com/maven/how-to-add-oracle-jdbc-driver-in-your-maven-local-repository/`
 

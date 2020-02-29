@@ -1,4 +1,4 @@
-package com.example.springdatajpa.model;
+package com.example.dxc.springdatajpa.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

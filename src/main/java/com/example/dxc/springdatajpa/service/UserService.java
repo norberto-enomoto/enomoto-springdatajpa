@@ -1,8 +1,8 @@
-package com.example.springdatajpa.service;
+package com.example.dxc.springdatajpa.service;
 
 
-import com.example.springdatajpa.model.User;
-import com.example.springdatajpa.repository.UserRepository;
+import com.example.dxc.springdatajpa.model.User;
+import com.example.dxc.springdatajpa.repository.UserRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -5,9 +5,11 @@ server:
 # spring:
 #   datasource:
 #     driverClassName: com.mysql.jdbc.Driver
-#     url: jdbc:mysql://mysql-db:3306/db_example
+#     url: jdbc:mysql://database:3306/db_example
 #     username: springuser
 #     password: ThePassword
+#     hikari.connection-timeout: 60000
+#     hikari.maximum-pool-size: 5    
 #   jpa:
 #     hibernate.ddl-auto: update
 #     generate-ddl: true
@@ -16,7 +18,7 @@ server:
 # #Postgres
 # spring:
 #   datasource:    
-#     url: jdbc:postgresql://localhost:5432/db_example
+#     url: jdbc:postgresql://database:5432/db_example
 #     username: postgres
 #     password: 
 #   jpa:
