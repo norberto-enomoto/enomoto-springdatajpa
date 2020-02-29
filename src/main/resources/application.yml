@@ -2,16 +2,16 @@ server:
   port: 8181
   
 #Mysql  
-spring:
-  datasource:
-    driverClassName: com.mysql.jdbc.Driver
-    url: jdbc:mysql://mysql-db:3306/db_example
-    username: springuser
-    password: ThePassword
-  jpa:
-    hibernate.ddl-auto: update
-    generate-ddl: true
-    show-sql: true
+# spring:
+#   datasource:
+#     driverClassName: com.mysql.jdbc.Driver
+#     url: jdbc:mysql://mysql-db:3306/db_example
+#     username: springuser
+#     password: ThePassword
+#   jpa:
+#     hibernate.ddl-auto: update
+#     generate-ddl: true
+#     show-sql: true
 
 # #Postgres
 # spring:
@@ -27,19 +27,19 @@ spring:
 #       hibernate.jdbc.lob.non_contextual_creation: true    
 
 #Oracle
-# spring:
-#   datasource:
-#     driverClassName: oracle.jdbc.driver.OracleDriver
-#     url: jdbc:oracle:thin:@localhost:49161:XE
-#     username: SYSTEM
-#     password: oracle
-#     hikari.connection-timeout: 60000
-#     hikari.maximum-pool-size: 5    
-#   jpa:
-#     hibernate.ddl-auto: update
-#     database-platform: org.hibernate.dialect.Oracle10gDialect    
-#     generate-ddl: true
-#     show-sql: true
+spring:
+  datasource:
+    driverClassName: oracle.jdbc.driver.OracleDriver
+    url: jdbc:oracle:thin:@database:1521:XE
+    username: SYSTEM
+    password: oracle
+    hikari.connection-timeout: 60000
+    hikari.maximum-pool-size: 5    
+  jpa:
+    hibernate.ddl-auto: update
+    database-platform: org.hibernate.dialect.Oracle10gDialect    
+    generate-ddl: true
+    show-sql: true
 
 logging: 
   pattern:

@@ -36,11 +36,11 @@ Run the command bellow
 Run the command bellow
 
 * `https://github.com/wnameless/docker-oracle-xe-11g`
-* `docker run -d -p 49161:1521 -p 8080:8080 wnameless/oracle-xe-11g-r2`
+* `docker run -d -p 1521:1521 -p 8080:8080 wnameless/oracle-xe-11g-r2`
 
 ```
 hostname: localhost
-port: 49161
+port: 1521
 sid: xe
 username: system
 password: oracle
@@ -50,7 +50,7 @@ password: oracle
 
 ```
 Add the following entry at the hosts file
-127.0.0.1          mysql-db
+127.0.0.1          database
 ```
 
 ## docker-compose
@@ -58,5 +58,14 @@ Add the following entry at the hosts file
 * `docker-compose up -d`
 * `docker-compose stop`
 * `docker-compose start`
+
+## Important Link for Oracle JDBC driver
+* `https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html`
+* `https://mkyong.com/maven/how-to-add-oracle-jdbc-driver-in-your-maven-local-repository/`
+
+```
+Installation for Windows
+mvn install:install-file -Dfile="ojdbc7.jar" -DgroupId="com.oracle" -DartifactId="ojdbc7" -Dversion="12.1.0" -Dpackaging=jar
+```
 
 

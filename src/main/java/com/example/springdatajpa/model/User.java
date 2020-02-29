@@ -12,7 +12,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity // This tells Hibernate to make a table out of this class
-@Table(name = "user_appliaction")
+@Table(name = "user_application")
 @Data
 @Builder
 @AllArgsConstructor

@@ -1,0 +1,37 @@
+version: '3.5'
+services:
+
+# Database Service (Oracle)
+  db:
+    image: sath89/oracle-12c
+    container_name: database
+    ports:
+      - 1521:1521
+    volumes:
+      - oracle/data:/u01/app/oracle
+    networks:
+      - localhost
+    environment:
+      - ORACLE_ALLOW_REMOTE=true
+      - WEB_CONSOLE=false
+      - ORACLE_SID=xe
+
+# springboot
+  springboot:
+    image: enomoto/springdatajpa:latest
+    ports:
+      - "8181:8181"
+    restart: always
+    depends_on: 
+      - db # This service depends on mysql. Start that first.   
+    networks: # Networks to join (Services on the same network can communicate with each other using their name)
+      - localhost
+    container_name: springdatajpa
+
+volumes:
+  db-data:
+
+# Networks to be created to facilitate communication between containers
+networks:
+  localhost:
+
