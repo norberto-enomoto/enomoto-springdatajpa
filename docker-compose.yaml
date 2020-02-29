@@ -1,5 +1,23 @@
 version: '3.5'
 services:
+
+# Database Service (Mysql)
+  db:
+    image: mysql:5.7
+    container_name: mysql-db
+    ports:
+      - "3306:3306"
+    restart: always    
+    environment:
+      MYSQL_DATABASE: db_example
+      MYSQL_USER: springuser
+      MYSQL_PASSWORD: ThePassword
+      MYSQL_ROOT_PASSWORD: 123456
+    volumes:
+      - db-data:/var/lib/mysql
+    networks:
+      - localhost   
+
 # springboot
   springboot:
     image: enomoto/springdatajpa:latest
@@ -12,21 +30,10 @@ services:
       - localhost
     container_name: springdatajpa
 
-# Database Service (Mysql)
-  db:
-    image: mysql:latest
-    ports:
-      - "3306:3306"
-    restart: always
-    environment:
-      MYSQL_DATABASE: db_example
-      MYSQL_USER: springuser
-      MYSQL_PASSWORD: ThePassword
-      MYSQL_ROOT_PASSWORD: 123456
-    networks:
-      - localhost
-    container_name: mysql-db
+volumes:
+  db-data:
 
 # Networks to be created to facilitate communication between containers
 networks:
   localhost:
+
