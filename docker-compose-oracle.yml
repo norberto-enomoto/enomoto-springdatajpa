@@ -3,7 +3,7 @@ services:
 
 # Database Service (Oracle)
   db:
-    image: wnameless/oracle-xe-11g-r2
+    image: enomoto/oracle-xe-11g-r2
     container_name: database
     ports:
       - 1521:1521
