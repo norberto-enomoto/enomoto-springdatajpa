@@ -7,8 +7,8 @@ services:
     container_name: database
     ports:
       - 1521:1521
-    #volumes:
-    #  - db-data:/u01/app/oracle
+    volumes:
+      - db-data:/u01/app/oracle
     networks:
       - localhost
     environment:

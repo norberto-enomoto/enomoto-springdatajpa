@@ -64,6 +64,12 @@ Add the following entry at the hosts file
 * `docker-compose stop`
 * `docker-compose start`
 
+```
+Tips for Linux environment
+sudo mkdir /sys/fs/cgroup/systemd
+sudo mount -t cgroup -o none,name=systemd cgroup /sys/fs/cgroup/systemd
+```
+
 ## Important Links for Oracle JDBC driver
 * `https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html`
 * `https://mkyong.com/maven/how-to-add-oracle-jdbc-driver-in-your-maven-local-repository/`
