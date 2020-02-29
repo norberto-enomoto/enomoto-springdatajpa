@@ -75,7 +75,7 @@ sudo mount -t cgroup -o none,name=systemd cgroup /sys/fs/cgroup/systemd
 * `https://mkyong.com/maven/how-to-add-oracle-jdbc-driver-in-your-maven-local-repository/`
 
 ```
-Installation for Windows
+Installation for Windows or Linux
 mvn install:install-file -Dfile="ojdbc7.jar" -DgroupId="com.oracle" -DartifactId="ojdbc7" -Dversion="12.1.0" -Dpackaging=jar
 ```
 
