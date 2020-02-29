@@ -44,9 +44,8 @@
             <groupId>com.oracle</groupId>
             <artifactId>ojdbc7</artifactId>
 			<version>12.1.0</version>
-
-			<!-- <scope>system</scope> -->
-  			<!-- <systemPath>${project.basedir}/src/main/resources/ojdbc7-12.1.0.jar</systemPath> -->
+			<scope>system</scope>
+  			<systemPath>${project.basedir}/src/main/resources/ojdbc7-12.1.0.jar</systemPath>
         </dependency>
 		
 		<dependency>
