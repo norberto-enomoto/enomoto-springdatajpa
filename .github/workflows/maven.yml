@@ -19,6 +19,6 @@ jobs:
       uses: actions/upload-artifact@v1.0.0
       with:
         # Artifact name
-        name: accessing-data-mysql-0.0.1-SNAPSHOT
+        name: spring-data-jpa
         # Directory containing files to upload
-        path: target/accessing-data-mysql-0.0.1-SNAPSHOT.jar
+        path: target/spring-data-jpa-0.0.1.jar
