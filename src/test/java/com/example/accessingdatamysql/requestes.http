@@ -1,0 +1,15 @@
+http://localhost:8181/users
+
+
+###
+
+POST http://localhost:8181/users HTTP/1.1
+content-type: application/json
+
+{    
+    "name": "Norberto Enomoto",
+    "email": "norberto.enomoto@gmail.com"
+}
+
+###
+http://localhost:8181/users/1
