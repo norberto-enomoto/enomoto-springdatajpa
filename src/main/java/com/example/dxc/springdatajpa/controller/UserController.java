@@ -2,8 +2,9 @@ package com.example.dxc.springdatajpa.controller;
 
 import javax.validation.Valid;
 
-import com.example.dxc.springdatajpa.service.UserService;
+import com.example.dxc.springdatajpa.dto.UserDTO;
 import com.example.dxc.springdatajpa.model.User;
+import com.example.dxc.springdatajpa.service.UserService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -41,15 +42,15 @@ public class UserController {
   }
 
   @PostMapping
-  public ResponseEntity<User> createUser(@RequestBody @Valid UserPayload userPayload) {
-    User user = userService.createUser(userPayload.getName(), userPayload.getEmail());
+  public ResponseEntity<User> createUser(@RequestBody @Valid UserDTO userDTO) {
+    User user = userService.createUser(userDTO.getName(), userDTO.getEmail());
     return ResponseEntity.status(HttpStatus.CREATED).body(user);
   }
 
   @PutMapping("/{id}")
   public ResponseEntity<User> createUser(@PathVariable Integer id,
-      @RequestBody @Valid UserPayload userPayload) {
-    User user = userService.updateUser(id, userPayload.getName(), userPayload.getEmail());
+      @RequestBody @Valid UserDTO userDTO) {
+    User user = userService.updateUser(id, userDTO.getName(), userDTO.getEmail());
     return ResponseEntity.ok(user);
   }
 
