@@ -5,6 +5,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.Email;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -21,7 +22,8 @@ import lombok.NoArgsConstructor;
 public class User {
   @Id
   @GeneratedValue(strategy=GenerationType.AUTO)
-  private Integer id;
+  private Integer id;  
   private String name;
+  @Email(message = "Seu e-mail nao é valido, por favor digite um e-mail valido")
   private String email;  
 }
