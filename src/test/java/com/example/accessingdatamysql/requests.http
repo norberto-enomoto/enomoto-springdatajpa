@@ -1,15 +1,15 @@
-http://localhost:8181/users
+http://localhost:8181/user
 
 
 ###
 
-POST http://localhost:8181/users HTTP/1.1
+POST http://localhost:8181/user HTTP/1.1
 content-type: application/json
 
 {    
-    "name": "Norberto Enomoto",
-    "email": "norberto.enomoto@gmail.com"
+    "name": "Katy",
+    "email": "Katy@gmail.com"
 }
 
 ###
-http://localhost:8181/users/1
+http://localhost:8181/user/4
