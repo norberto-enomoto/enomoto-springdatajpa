@@ -3,12 +3,12 @@ http://localhost:8181/user
 
 ###
 
-POST http://localhost:8181/user HTTP/1.1
+POST http://localhost:8181/users HTTP/1.1
 content-type: application/json
 
 {    
-    "name": "Katy",
-    "email": "Katy@gmail.com"
+    "name": "Norberto",
+    "email": "Norberto@gmail.com"
 }
 
 ###
