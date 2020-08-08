@@ -78,5 +78,6 @@ sudo mount -t cgroup -o none,name=systemd cgroup /sys/fs/cgroup/systemd
 Installation for Windows or Linux
 mvn install:install-file -Dfile="ojdbc7.jar" -DgroupId="com.oracle" -DartifactId="ojdbc7" -Dversion="12.1.0" -Dpackaging=jar
 ```
+Norberto Hideaki Enomoto
 
 
