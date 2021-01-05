@@ -9,11 +9,10 @@ This project shows how to use Spring Data JPA using MySQL or Oracle databases
 * `cd target`
 * `java -jar accessing-data-mysql-0.0.1-SNAPSHOT.jar`
 
-## MySQL
+## MySQL - https://hub.docker.com/_/mysql/
 
 Run the command bellow
 
-* `https://hub.docker.com/_/mysql/* `
 * `docker run --name mysql -e MYSQL_ROOT_PASSWORD=123456 -d -p 3306:3306 mysql:5.7`
 * `docker exec -it mysql bash`
 * `mysql -u root -p`
@@ -23,11 +22,10 @@ Run the command bellow
 * `exit`
 * `mvn spring-boot:run`
 
-## Postgres
+## Postgres - https://hub.docker.com/_/postgres/
 
-Run the command bellow
+Run the command bellow 
 
-* `https://hub.docker.com/_/postgres/`
 * `docker run --name postgres -e POSTGRES_PASSWORD=ThePassword -d -p 5432:5432 postgres`
 * `docker exec -it postgres bash`
 * `psql -U postgres`
@@ -36,11 +34,10 @@ Run the command bellow
 * `\q`
 * `mvn spring-boot:run`
 
-## Oracle 
+## Oracle - https://github.com/wnameless/docker-oracle-xe-11g
 
 Run the command bellow
 
-* `https://github.com/wnameless/docker-oracle-xe-11g`
 * `docker run --name oracle-xe -d -p 1521:1521 -p 8080:8080 wnameless/oracle-xe-11g-r2`
 * `docker exec -it oracle-xe bash`
 * `sqlplus`
