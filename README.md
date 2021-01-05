@@ -13,8 +13,9 @@ This project shows how to use Spring Data JPA using MySQL or Oracle databases
 
 Run the command bellow
 
-* `docker run --name poc-mysql -e MYSQL_ROOT_PASSWORD=123456 -d -p 3306:3306 mysql:5.7`
-* `docker exec -it poc-mysql bash`
+* `https://hub.docker.com/_/mysql/* `
+* `docker run --name mysql -e MYSQL_ROOT_PASSWORD=123456 -d -p 3306:3306 mysql:5.7`
+* `docker exec -it mysql bash`
 * `mysql -u root -p`
 * `create database db_example;`
 * `create user 'springuser'@'%' identified by 'ThePassword';`
@@ -26,17 +27,31 @@ Run the command bellow
 
 Run the command bellow
 
-* `docker run -d -p 5432:5432 --name postgres postgres`
+* `https://hub.docker.com/_/postgres/`
+* `docker run --name postgres -e POSTGRES_PASSWORD=ThePassword -d -p 5432:5432 postgres`
 * `docker exec -it postgres bash`
 * `psql -U postgres`
 * `CREATE DATABASE "db_example";`
+* `CREATE USER springuser PASSWORD 'ThePassword';`
+* `\q`
+* `mvn spring-boot:run`
 
 ## Oracle 
 
 Run the command bellow
 
 * `https://github.com/wnameless/docker-oracle-xe-11g`
-* `docker run -d -p 1521:1521 -p 8080:8080 wnameless/oracle-xe-11g-r2`
+* `docker run --name oracle-xe -d -p 1521:1521 -p 8080:8080 wnameless/oracle-xe-11g-r2`
+* `docker exec -it oracle-xe bash`
+* `sqlplus`
+* `user-name: system`
+* `password: oracle`
+* `CREATE USER springuser IDENTIFIED BY ThePassword;`
+* `GRANT CONNECT,RESOURCE,DBA TO springuser;`
+* `GRANT UNLIMITED TABLESPACE TO springuser;`
+* `commit;`
+* `exit;`
+* `mvn spring-boot:run`
 
 ```
 hostname: localhost
